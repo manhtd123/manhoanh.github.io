@@ -193,7 +193,15 @@ h1, h2, h3, h4, h5, h6, figure {
 		color: $brand-white;
 	}
 	.menu-1, .menu-2 {
-		@media screen and (max-width: $screen-sm ) {
+		@media screen and (max-width: $screen-lg ) {
+			display: none;
+		}
+	}
+	.menu-3 {
+		@media screen and (max-width: $screen-lg ) {
+			display: block;
+		}
+		@media screen and (min-width: $screen-lg ) {
 			display: none;
 		}
 	}
@@ -1622,7 +1630,7 @@ form {
   width: 44px;
   z-index: 2001;
   border-bottom: none!important;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: $screen-lg) {
   	display: block;
   }
 }
