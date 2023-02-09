@@ -1472,7 +1472,7 @@ form {
 						position: absolute;
 						right: 0px;
 						@include icomoon;
-						content: "\e921";
+						content: "";
 						font-size: 20px;
 						color: rgba(255,255,255,.2);
 						@include transition(.5s);
