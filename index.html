@@ -73,10 +73,10 @@
 			</div>
 		</nav>
 
-		<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/banner2.jpg);"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
+		<header id="fh5co-header" class="fh5co-cover" role="banner" data-stellar-background-ratio="0.5">
+			<img class="banner" src="images/banner2.jpg" alt="">
+			<div class="overlay overlay-custom"></div>
+			<div class="container container-custom">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
@@ -500,14 +500,18 @@
 				<div class="row copyright">
 					<div class="col-md-12 text-center">
 						<p>
-							<small class="block">&copy; 2023 Nguyen Quoc Huy.</small>
+							<small class="block">&copy; 2023 Nguyen Quoc Huy</small>
 						</p>
 						<p>
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/quochuy.nguyen.217"><i
+										class="icon-twitter"></i></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/quochuy.nguyen.217"><i
+										class="icon-facebook"></i></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/quochuy.nguyen.217"><i
+										class="icon-linkedin"></i></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/quochuy.nguyen.217"><i
+										class="icon-dribbble"></i></a></li>
 						</ul>
 						</p>
 					</div>
@@ -516,10 +520,6 @@
 			</div>
 		</footer>
 	</div>
-
-	<!-- <div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div> -->
 
 	<button class="btn-gift" id="myBtn">Mừng cưới</button>
 
@@ -616,6 +616,25 @@
 
 		.modal-content p {
 			margin-top: 16px;
+		}
+
+		.banner {
+			object-fit: cover;
+			z-index: 1;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+
+		.overlay-custom {
+			z-index: 2 !important;
+		}
+
+
+		.container-custom {
+			z-index: 100;
+			position: absolute;
+			width: 100%;
 		}
 
 		@media screen and (max-width: 992px) {
