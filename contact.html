@@ -323,7 +323,6 @@
 			display: none;
 			position: fixed;
 			z-index: 100;
-			padding-top: 100px;
 			left: 0;
 			top: 0;
 			width: 100%;
@@ -460,7 +459,8 @@
 		var btnPlay = document.getElementById("btnPlay");
 
 		btn.onclick = function () {
-			modal.style.display = "block";
+			modal.style.display = "flex";
+			modal.style.justifyContent = "center";
 		}
 
 		span.onclick = function () {
