@@ -30,6 +30,7 @@ $form-group-margin-bottom: 30px !default;
   -o-transform: translateX($translatex);
   transform: translateX($translatex);
 }
+
 @mixin transition($transition) {
   -moz-transition: all $transition ease;
   -o-transition: all $transition ease;
@@ -37,6 +38,7 @@ $form-group-margin-bottom: 30px !default;
   -ms-transition: all $transition ease;
   transition: all $transition ease;
 }
+
 @mixin inline-block() {
   display: -moz-inline-stack;
   display: inline-block;
@@ -50,6 +52,7 @@ $form-group-margin-bottom: 30px !default;
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
+
 @mixin flex() {
   display: -webkit-box;
   display: -moz-box;
@@ -57,6 +60,7 @@ $form-group-margin-bottom: 30px !default;
   display: -webkit-flex;
   display: flex;
 }
+
 @mixin flexwrap() {
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
@@ -66,8 +70,7 @@ $form-group-margin-bottom: 30px !default;
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix")
-      format("embedded-opentype"),
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"),
     url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"),
     url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"),
     url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
@@ -107,12 +110,14 @@ body {
   color: #828282;
   background: #fff;
 }
+
 #page {
   position: relative;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
   @include transition(0.5s);
+
   .offcanvas & {
     overflow: hidden;
     position: absolute;
@@ -130,9 +135,11 @@ body {
     }
   }
 }
+
 a {
   color: $brand-primary;
   @include transition(0.5s);
+
   &:hover,
   &:active,
   &:focus {
@@ -141,6 +148,7 @@ a {
     text-decoration: none;
   }
 }
+
 p {
   margin-bottom: 20px;
 }
@@ -157,6 +165,7 @@ figure {
   font-weight: 400;
   margin: 0 0 20px 0;
 }
+
 ::-webkit-selection {
   color: $brand-white;
   background: $brand-primary;
@@ -166,6 +175,7 @@ figure {
   color: $brand-white;
   background: $brand-primary;
 }
+
 ::selection {
   color: $brand-white;
   background: $brand-primary;
@@ -179,9 +189,11 @@ figure {
   width: 100%;
   padding: 20px 0;
   z-index: 1001;
+
   @media screen and (max-width: $screen-sm) {
     padding: 20px 0;
   }
+
   #fh5co-logo {
     font-size: 40px;
     margin: 0;
@@ -189,46 +201,56 @@ figure {
     line-height: 40px;
     font-family: $font-secondary;
   }
+
   a {
     padding: 5px 10px;
     color: $brand-white;
   }
+
   .menu-1,
   .menu-2 {
     @media screen and (max-width: $screen-lg) {
       display: none;
     }
   }
+
   .menu-3 {
     @media screen and (max-width: $screen-lg) {
       display: block;
     }
+
     @media screen and (min-width: $screen-lg) {
       display: none;
     }
   }
+
   ul {
     padding: 0;
     margin: 2px 0 0 0;
+
     li {
       padding: 0;
       margin: 0;
       list-style: none;
       display: inline;
+
       a {
         font-size: 14px;
         padding: 30px 10px;
         text-transform: uppercase;
         color: rgba(255, 255, 255, 0.5);
         @include transition(0.5s);
+
         &:hover,
         &:focus,
         &:active {
           color: rgba(255, 255, 255, 1);
         }
       }
+
       &.has-dropdown {
         position: relative;
+
         .dropdown {
           width: 130px;
           -webkit-box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
@@ -245,6 +267,7 @@ figure {
           padding: 20px;
           @include border-radius(4px);
           @include transition(0s);
+
           &:before {
             bottom: 100%;
             // left: 30%;
@@ -263,9 +286,11 @@ figure {
           li {
             display: block;
             margin-bottom: 7px;
+
             &:last-child {
               margin-bottom: 0;
             }
+
             a {
               padding: 2px 0;
               display: block;
@@ -273,26 +298,31 @@ figure {
               line-height: 1.2;
               text-transform: none;
               font-size: 15px;
+
               &:hover {
                 color: $brand-black;
               }
             }
           }
         }
+
         &:hover,
         &:focus {
           a {
             color: $brand-white;
           }
+
           .dropdown {
             // visibility: visible;
             // opacity: 1;
           }
         }
       }
+
       &.btn-cta {
         a {
           color: $brand-primary;
+
           span {
             background: $brand-white;
             padding: 4px 20px;
@@ -300,6 +330,7 @@ figure {
             @include transition(0.3s);
             @include border-radius(100px);
           }
+
           &:hover {
             span {
               -webkit-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
@@ -309,14 +340,16 @@ figure {
           }
         }
       }
+
       &.active {
-        > a {
+        >a {
           color: $brand-white !important;
         }
       }
     }
   }
 }
+
 // #fh5co-header,
 // #fh5co-counter,
 // #fh5co-event,
@@ -334,6 +367,7 @@ figure {
   background-repeat: no-repeat;
   position: relative;
 }
+
 .fh5co-bg {
   background-position: center center;
   width: 100%;
@@ -345,6 +379,7 @@ figure {
   height: 450px;
   overflow: hidden;
   @include border-radius(7px);
+
   a {
     z-index: 1001;
     position: absolute;
@@ -370,6 +405,7 @@ figure {
       font-size: 40px;
     }
   }
+
   .overlay {
     position: absolute;
     top: 0;
@@ -379,10 +415,12 @@ figure {
     background: rgba(0, 0, 0, 0.5);
     @include transition(0.5s);
   }
+
   &:hover {
     .overlay {
       background: rgba(0, 0, 0, 0.7);
     }
+
     a {
       position: relative;
       -webkit-transform: scale(1.2);
@@ -393,6 +431,7 @@ figure {
     }
   }
 }
+
 .fh5co-cover {
   height: 900px;
   background-size: cover;
@@ -400,6 +439,7 @@ figure {
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
+
   .overlay {
     z-index: 0;
     position: absolute;
@@ -409,18 +449,22 @@ figure {
     right: 0;
     background: rgba(0, 0, 0, 0.5);
   }
-  > .fh5co-container {
+
+  >.fh5co-container {
     position: relative;
     z-index: 10;
   }
+
   @media screen and (max-width: $screen-sm) {
     height: 600px;
   }
+
   .display-t,
   .display-tc {
     height: 900px;
     display: table;
     width: 100%;
+
     @media screen and (max-width: $screen-sm) {
       height: 600px;
     }
@@ -428,14 +472,17 @@ figure {
 
   &.fh5co-cover-sm {
     height: 600px;
+
     @media screen and (max-width: $screen-sm) {
       height: 400px;
     }
+
     .display-t,
     .display-tc {
       height: 600px;
       display: table;
       width: 100%;
+
       @media screen and (max-width: $screen-sm) {
         height: 400px;
       }
@@ -443,28 +490,48 @@ figure {
   }
 }
 
+// #fh5co-couple {
+//   background-image: url(images/174A0233.jpg);
+//   background-size: cover;
+// }
+
+// #fh5co-couple-story {
+//   .overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background: rgba(0, 0, 0, 0.4);
+//   }
+// }
+
 #fh5co-counter,
 #fh5co-event {
   height: 850px;
   float: left;
+
   .display-t,
   .display-tc {
     height: 700px;
     display: table;
     width: 100%;
   }
+
   .fh5co-heading {
     h2 {
-      color: $brand-white;
+      color: $brand-primary;
     }
+
     span {
-      color: rgba($brand-white, 0.5);
+      color: rgba($brand-primary, 0.5);
       text-transform: uppercase;
       font-size: 13px;
       letter-spacing: 2px;
       font-weight: 600;
     }
   }
+
   .overlay {
     position: absolute;
     top: 0;
@@ -473,9 +540,11 @@ figure {
     bottom: 0;
     background: rgba(0, 0, 0, 0.4);
   }
+
   @media screen and (max-width: $screen-sm) {
     height: inherit;
     padding: 7em 0;
+
     .display-t,
     .display-tc {
       height: inherit;
@@ -485,13 +554,15 @@ figure {
   .event-wrap {
     border: 2px solid rgba($brand-white, 0.5);
     background: rgba($brand-white, 0.1);
-    padding: 30px;
+    padding: 20px;
     width: 100%;
     float: left;
     @include border-radius(4px);
+
     @media screen and (max-width: $screen-sm) {
       margin-bottom: 10px;
     }
+
     h3 {
       font-size: 20px;
       color: $brand-white;
@@ -501,15 +572,18 @@ figure {
       text-transform: uppercase;
       letter-spacing: 2px;
     }
+
     p,
     span {
       display: block;
       color: rgba($brand-white, 0.8);
     }
+
     i {
       color: rgba($brand-white, 1);
       font-size: 20px;
     }
+
     .event-col {
       width: 50%;
       float: left;
@@ -520,6 +594,7 @@ figure {
 
 #fh5co-counter {
   height: 600px;
+
   @media screen and (max-width: $screen-sm) {
     height: auto;
   }
@@ -530,6 +605,7 @@ figure {
   list-style: none;
   padding: 20px 0 20px;
   position: relative;
+
   &:before {
     top: 0;
     bottom: 0;
@@ -539,28 +615,34 @@ figure {
     background-color: #d4d4d4;
     left: 50%;
     margin-left: 0px;
+
     @media screen and (max-width: $screen-xs) {
       margin-left: -64px;
     }
   }
-  > li {
+
+  >li {
     margin-bottom: 20px;
     position: relative;
+
     &:before,
     &:after {
       content: " ";
       display: table;
     }
+
     &:after {
       clear: both;
     }
-    > .timeline-panel {
+
+    >.timeline-panel {
       width: 40%;
       float: left;
       border: 1px solid #d4d4d4;
       padding: 30px;
       position: relative;
       @include border-radius(4px);
+
       &:before {
         position: absolute;
         top: 80px;
@@ -572,6 +654,7 @@ figure {
         border-bottom: 15px solid transparent;
         content: " ";
       }
+
       &:after {
         position: absolute;
         top: 81px;
@@ -583,17 +666,21 @@ figure {
         border-bottom: 14px solid transparent;
         content: " ";
       }
+
       @media screen and (max-width: $screen-xs) {
         width: 75% !important;
+
         &:before {
           top: 30px;
         }
+
         &:after {
           top: 31px;
         }
       }
     }
-    > .timeline-badge {
+
+    >.timeline-badge {
       background-size: cover;
       background-position: top center;
       background-repeat: no-repeat;
@@ -611,21 +698,25 @@ figure {
       background-color: #999999;
       z-index: 100;
       @include border-radius(50%);
+
       @media screen and (max-width: $screen-xs) {
         width: 60px;
         height: 60px;
         margin-left: -20px !important;
       }
     }
+
     &.timeline-inverted {
-      > .timeline-panel {
+      >.timeline-panel {
         float: right;
+
         &:before {
           border-left-width: 0;
           border-right-width: 15px;
           left: -15px;
           right: auto;
         }
+
         &:after {
           border-left-width: 0;
           border-right-width: 14px;
@@ -640,6 +731,7 @@ figure {
 .timeline-title {
   margin-top: 0;
 }
+
 .date {
   display: block;
   margin-bottom: 20px;
@@ -648,12 +740,12 @@ figure {
   letter-spacing: 2px;
 }
 
-.timeline-body > p,
-.timeline-body > ul {
+.timeline-body>p,
+.timeline-body>ul {
   margin-bottom: 0;
 }
 
-.timeline-body > p + p {
+.timeline-body>p+p {
   margin-top: 5px;
 }
 
@@ -662,31 +754,31 @@ figure {
     left: 90px;
   }
 
-  ul.timeline > li > .timeline-panel {
+  ul.timeline>li>.timeline-panel {
     width: calc(100% - 200px);
     width: -moz-calc(100% - 200px);
     width: -webkit-calc(100% - 200px);
     // width: 40%;
   }
 
-  ul.timeline > li > .timeline-badge {
+  ul.timeline>li>.timeline-badge {
     left: 15px;
     margin-left: 0;
     top: 16px;
   }
 
-  ul.timeline > li > .timeline-panel {
+  ul.timeline>li>.timeline-panel {
     float: right;
   }
 
-  ul.timeline > li > .timeline-panel:before {
+  ul.timeline>li>.timeline-panel:before {
     border-left-width: 0;
     border-right-width: 15px;
     left: -15px;
     right: auto;
   }
 
-  ul.timeline > li > .timeline-panel:after {
+  ul.timeline>li>.timeline-panel:after {
     border-left-width: 0;
     border-right-width: 14px;
     left: -14px;
@@ -703,6 +795,7 @@ figure {
   padding: 0;
   margin: 0;
   width: 100%;
+
   li {
     display: block;
     padding: 0;
@@ -716,15 +809,18 @@ figure {
     clear: left;
     position: relative;
     @include border-radius(7px);
+
     @media screen and (max-width: $screen-xs) {
       margin-left: 0;
     }
+
     a {
       min-height: 400px;
       padding: 2em;
       position: relative;
       width: 100%;
       display: block;
+
       &:before {
         position: absolute;
         top: 0;
@@ -738,6 +834,7 @@ figure {
 
         background: rgba(0, 0, 0, 0.2);
       }
+
       &:hover {
         &:before {
           background: rgba(0, 0, 0, 0.5);
@@ -751,31 +848,38 @@ figure {
         right: 2em;
         position: absolute;
         z-index: 100;
+
         @media screen and (max-width: $screen-sm) {
           bottom: 1em;
           left: 1em;
           right: 1em;
         }
+
         span {
           text-transform: uppercase;
           letter-spacing: 2px;
           font-size: 13px;
           color: rgba(255, 255, 255, 0.7);
         }
+
         h2 {
           color: $brand-white;
           margin-bottom: 0;
+
           @media screen and (max-width: $screen-sm) {
             font-size: 20px;
           }
         }
       }
     }
+
     &.one-third {
       width: 32.3%;
+
       @media screen and (max-width: $screen-sm) {
         width: 49%;
       }
+
       @media screen and (max-width: $screen-xs) {
         width: 100%;
       }
@@ -788,6 +892,7 @@ figure {
   width: 100%;
   height: 500px;
   position: relative;
+
   @media screen and (max-width: $screen-sm) {
     height: 200px;
   }
@@ -796,16 +901,19 @@ figure {
 .fh5co-social-icons {
   margin: 0;
   padding: 0;
+
   li {
     margin: 0;
     padding: 0;
     list-style: none;
     @include inline-block;
+
     a {
       @include inline-block;
       color: $brand-primary;
       padding-left: 10px;
       padding-right: 10px;
+
       i {
         font-size: 20px;
       }
@@ -817,11 +925,13 @@ figure {
   ul {
     padding: 0;
     margin: 0;
+
     li {
       padding: 0 0 0 50px;
       margin: 0 0 30px 0;
       list-style: none;
       position: relative;
+
       &:before {
         color: $brand-primary;
         position: absolute;
@@ -829,24 +939,28 @@ figure {
         top: 0.05em;
         @include icomoon;
       }
+
       &.address {
         &:before {
           font-size: 30px;
           content: "\e9d1";
         }
       }
+
       &.phone {
         &:before {
           font-size: 23px;
           content: "\e9f4";
         }
       }
+
       &.email {
         &:before {
           font-size: 23px;
           content: "\e9da";
         }
       }
+
       &.url {
         &:before {
           font-size: 23px;
@@ -869,32 +983,39 @@ form {
   .display-tc {
     display: table-cell !important;
     vertical-align: middle;
+
     h1,
     h2 {
       margin: 0;
       padding: 0;
       color: rgba(255, 255, 255, 1);
     }
+
     h1 {
       margin-bottom: 0px;
       font-size: 80px;
       line-height: 1.5;
       font-family: $font-secondary;
+
       @media screen and (max-width: $screen-sm) {
         font-size: 40px;
       }
+
       @media screen and (max-width: $screen-xs) {
         font-size: 30px;
       }
     }
+
     h2 {
       font-size: 20px;
       line-height: 1.5;
       margin-bottom: 30px;
+
       @media screen and (max-width: $screen-xs) {
         font-size: 16px;
       }
     }
+
     .btn {
       padding: 15px 20px;
       background: $brand-white !important;
@@ -902,6 +1023,7 @@ form {
       border: none !important;
       font-size: 14px;
       text-transform: uppercase;
+
       // @include border-radius(2px);
       &:hover {
         background: $brand-white !important;
@@ -912,8 +1034,10 @@ form {
     }
   }
 }
+
 #fh5co-counter {
   text-align: center;
+
   .counter {
     font-size: 50px;
     margin-bottom: 10px;
@@ -921,6 +1045,7 @@ form {
     font-weight: 100;
     display: block;
   }
+
   .counter-label {
     margin-bottom: 0;
     text-transform: uppercase;
@@ -933,6 +1058,7 @@ form {
       margin-bottom: 50px;
     }
   }
+
   .icon {
     width: 70px;
     height: 70px;
@@ -941,8 +1067,10 @@ form {
     -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
     margin-bottom: 30px;
+
     i {
       height: 70px;
+
       &:before {
         display: block;
         text-align: center;
@@ -957,7 +1085,8 @@ form {
   /* The countdown */
   margin-bottom: 2em;
 }
-.simply-countdown > .simply-section {
+
+.simply-countdown>.simply-section {
   /* coutndown blocks */
   display: inline-block;
   width: 100px;
@@ -974,15 +1103,17 @@ form {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
-.simply-countdown > .simply-section > div {
+.simply-countdown>.simply-section>div {
   /* countdown block inner div */
   display: table-cell;
   vertical-align: middle;
@@ -990,24 +1121,29 @@ form {
   width: 100px;
 }
 
-.simply-countdown > .simply-section .simply-amount,
-.simply-countdown > .simply-section .simply-word {
+.simply-countdown>.simply-section .simply-amount,
+.simply-countdown>.simply-section .simply-word {
   display: block;
   color: rgba($brand-white, 1);
   /* amounts and words */
 }
 
-.simply-countdown > .simply-section .simply-amount {
+.simply-countdown>.simply-section .simply-amount {
   font-size: 30px;
   /* amounts */
 }
 
-.simply-countdown > .simply-section .simply-word {
+.simply-countdown>.simply-section .simply-word {
   color: rgba($brand-white, 0.7);
   text-transform: uppercase;
   font-size: 12px;
   /* words */
 }
+
+// #fh5co-couple-story {
+//   background-image: url('images/174A0395.jpg');
+//   background-size: cover;
+// }
 
 #fh5co-testimonial,
 #fh5co-services,
@@ -1020,6 +1156,7 @@ form {
 .fh5co-section {
   padding: 7em 0;
   clear: both;
+
   @media screen and (max-width: $screen-sm) {
     padding: 3em 0;
   }
@@ -1034,10 +1171,12 @@ form {
   width: 90%;
   margin: 0 auto;
   position: relative;
+
   @media screen and (max-width: $screen-sm) {
     width: 100%;
   }
 }
+
 .heart {
   position: absolute;
   top: 4em;
@@ -1045,6 +1184,7 @@ form {
   right: 0;
   z-index: 99;
   animation: pulse 1s ease infinite;
+
   i {
     font-size: 20px;
     background: $brand-white;
@@ -1052,21 +1192,26 @@ form {
     color: $brand-primary;
     @include border-radius(50%);
   }
+
   @media screen and (max-width: $screen-sm) {
     display: none;
   }
 }
+
 .couple-half {
   width: 50%;
   float: left;
+
   @media screen and (max-width: $screen-sm) {
     width: 100%;
   }
+
   h3 {
     font-family: $font-secondary;
     color: $brand-primary;
     font-size: 30px;
   }
+
   .groom,
   .bride {
     float: left;
@@ -1075,14 +1220,17 @@ form {
     // margin-left: 5px;
     width: 150px;
     height: 150px;
+
     img {
       width: 150px;
       height: 150px;
       @include border-radius(50%);
     }
+
     @media screen and (max-width: $screen-xs) {
       width: 100%;
       height: 140px;
+
       img {
         width: 120px;
         height: 120px;
@@ -1090,32 +1238,40 @@ form {
       }
     }
   }
+
   .groom {
     float: right;
     margin-right: 5px;
   }
+
   .bride {
     float: left;
     margin-left: 5px;
   }
+
   .desc-groom {
     padding-right: 180px;
     text-align: right;
   }
+
   .desc-bride {
     padding-left: 180px;
     text-align: left;
   }
+
   @media screen and (max-width: $screen-xs) {
+
     .groom,
     .bride {
       margin-left: 0;
       margin-right: 0;
     }
+
     .desc-groom {
       padding-right: 0;
       text-align: center;
     }
+
     .desc-bride {
       padding-left: 0;
       text-align: center;
@@ -1130,6 +1286,7 @@ form {
   float: left;
   width: 100%;
   margin-bottom: 40px;
+
   @media screen and (max-width: $screen-sm) {
     margin-bottom: 50px;
   }
@@ -1142,6 +1299,7 @@ form {
     text-align: center;
     margin: 0 auto 30px auto;
     @include border-radius(50%);
+
     i {
       display: table-cell;
       vertical-align: middle;
@@ -1151,10 +1309,12 @@ form {
       color: $brand-primary;
     }
   }
+
   p,
   h3 {
     margin-bottom: 30px;
   }
+
   h3 {
     text-transform: uppercase;
     font-size: 18px;
@@ -1164,9 +1324,11 @@ form {
 
 .fh5co-heading {
   margin-bottom: 5em;
+
   &.fh5co-heading-sm {
     margin-bottom: 2em;
   }
+
   h2 {
     font-size: 60px;
     margin-bottom: 10px;
@@ -1174,15 +1336,18 @@ form {
     font-weight: bold;
     color: $brand-primary;
     font-family: $font-secondary;
+
     @media screen and (max-width: $screen-sm) {
       font-size: 40px;
     }
   }
+
   p {
     font-size: 18px;
     line-height: 1.5;
     color: #828282;
   }
+
   span {
     text-transform: uppercase;
     font-size: 13px;
@@ -1195,8 +1360,10 @@ form {
 #fh5co-testimonial {
   .wrap-testimony {
     position: relative;
+
     .testimony-slide {
       text-align: center;
+
       span {
         font-size: 12px;
         text-transform: uppercase;
@@ -1215,6 +1382,7 @@ form {
         @include inline-block;
         width: 100px;
         height: 100px;
+
         img {
           width: 100px;
           height: 100px;
@@ -1272,9 +1440,11 @@ form {
   width: 100%;
   margin-bottom: 30px;
   position: relative;
+
   &:last-child {
     margin-bottom: 0;
   }
+
   .icon {
     float: left;
     margin-right: 5%;
@@ -1288,9 +1458,11 @@ form {
     box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
 
     @include border-radius(50%);
+
     @media screen and (max-width: $screen-sm) {
       margin-right: 5%;
     }
+
     i {
       display: table-cell;
       vertical-align: middle;
@@ -1298,13 +1470,16 @@ form {
       color: $brand-primary;
     }
   }
+
   .feature-copy {
     float: left;
     width: 80%;
+
     @media screen and (max-width: $screen-sm) {
       width: 70%;
       float: left;
     }
+
     h3 {
       text-transform: uppercase;
       font-size: 18px;
@@ -1316,6 +1491,7 @@ form {
 
 #fh5co-started {
   position: relative;
+
   .overlay {
     position: absolute;
     top: 0;
@@ -1324,10 +1500,12 @@ form {
     bottom: 0;
     background: rgba(0, 0, 0, 0.4);
   }
+
   .fh5co-heading {
     h2 {
       color: $brand-white;
     }
+
     p {
       color: rgba($brand-white, 0.5);
     }
@@ -1357,11 +1535,14 @@ form {
     &:-ms-input-placeholder {
       color: $brand-white;
     }
+
     @include transition(0.5s);
+
     &:focus {
       background: rgba(255, 255, 255, 0.3);
     }
   }
+
   .btn {
     height: 54px;
     border: none !important;
@@ -1373,17 +1554,21 @@ form {
     padding-left: 50px;
     padding-right: 50px;
   }
+
   .form-inline {
     .form-group {
       width: 100% !important;
       margin-bottom: 10px;
+
       .form-control {
         width: 100%;
       }
     }
   }
+
   .fh5co-heading {
     margin-bottom: 30px;
+
     h2 {
       margin-bottom: 0;
     }
@@ -1392,6 +1577,7 @@ form {
 
 #fh5co-footer {
   .copyright {
+
     .pull-left,
     .pull-right {
       @media screen and (max-width: $screen-sm) {
@@ -1400,6 +1586,7 @@ form {
         text-align: center;
       }
     }
+
     .block {
       display: block;
     }
@@ -1410,17 +1597,20 @@ form {
 .owl-carousel .owl-controls .owl-dot {
   span {
     background: lighten($brand-black, 90%);
+
     &:hover,
     &:focus {
       background: lighten($brand-black, 80%);
     }
   }
+
   &:hover,
   &:focus {
     span {
       background: lighten($brand-black, 80%);
     }
   }
+
   &.active {
     span {
       background: transparent;
@@ -1443,30 +1633,38 @@ form {
   overflow-y: auto;
   @include translateX(270px);
   @include transition(0.5s);
+
   .offcanvas & {
     @include translateX(0px);
   }
+
   a {
     color: rgba(255, 255, 255, 0.5);
+
     &:hover {
       color: rgba(255, 255, 255, 0.8);
     }
   }
+
   ul {
     padding: 0;
     margin: 0;
+
     li {
       padding: 0;
       margin: 0;
       list-style: none;
-      > ul {
+
+      >ul {
         padding-left: 20px;
         display: none;
       }
+
       &.offcanvas-has-dropdown {
-        > a {
+        >a {
           display: block;
           position: relative;
+
           &:after {
             position: absolute;
             right: 0px;
@@ -1477,6 +1675,7 @@ form {
             @include transition(0.5s);
           }
         }
+
         &.active {
           a {
             &:after {
@@ -1500,6 +1699,7 @@ form {
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .gototop {
   position: fixed;
   bottom: 20px;
@@ -1508,10 +1708,12 @@ form {
   opacity: 0;
   visibility: hidden;
   @include transition(0.5s);
+
   &.active {
     opacity: 1;
     visibility: visible;
   }
+
   a {
     width: 50px;
     height: 50px;
@@ -1520,11 +1722,13 @@ form {
     color: $brand-white;
     text-align: center;
     @include border-radius(4px);
+
     i {
       height: 50px;
       display: table-cell;
       vertical-align: middle;
     }
+
     &:hover,
     &:active,
     &:focus {
@@ -1540,18 +1744,22 @@ form {
   height: 25px;
   cursor: pointer;
   text-decoration: none;
+
   &.active i {
+
     &::before,
     &::after {
       background: $brand-darker;
     }
   }
+
   &:hover,
   &:focus,
   &:active {
     outline: none;
     border-bottom: none !important;
   }
+
   i {
     position: relative;
     display: inline-block;
@@ -1563,6 +1771,7 @@ form {
     text-indent: -55px;
     background: #252525;
     transition: all 0.2s ease-out;
+
     &::before,
     &::after {
       content: "";
@@ -1574,10 +1783,12 @@ form {
       transition: all 0.2s ease-out;
     }
   }
+
   &.fh5co-nav-white {
-    > i {
+    >i {
       color: $brand-white;
       background: $brand-white;
+
       &::before,
       &::after {
         background: $brand-white;
@@ -1589,18 +1800,23 @@ form {
 .fh5co-nav-toggle i::before {
   top: -7px;
 }
+
 .fh5co-nav-toggle i::after {
   bottom: -7px;
 }
+
 .fh5co-nav-toggle:hover i::before {
   top: -10px;
 }
+
 .fh5co-nav-toggle:hover i::after {
   bottom: -10px;
 }
+
 .fh5co-nav-toggle.active i {
   background: transparent;
 }
+
 .fh5co-nav-toggle.active i::before {
   top: 0;
   -webkit-transform: rotateZ(45deg);
@@ -1609,6 +1825,7 @@ form {
   -o-transform: rotateZ(45deg);
   transform: rotateZ(45deg);
 }
+
 .fh5co-nav-toggle.active i::after {
   bottom: 0;
   -webkit-transform: rotateZ(-45deg);
@@ -1617,6 +1834,7 @@ form {
   -o-transform: rotateZ(-45deg);
   transform: rotateZ(-45deg);
 }
+
 .fh5co-nav-toggle {
   position: absolute;
   right: 0px;
@@ -1633,6 +1851,7 @@ form {
   width: 44px;
   z-index: 2001;
   border-bottom: none !important;
+
   @media screen and (max-width: $screen-lg) {
     display: block;
   }
@@ -1648,12 +1867,15 @@ form {
   @include border-radius(30px);
   @include transition(0.5s);
   padding: 8px 20px;
+
   &.btn-md {
     padding: 8px 20px !important;
   }
+
   &.btn-lg {
     padding: 18px 36px !important;
   }
+
   &:hover,
   &:active,
   &:focus {
@@ -1661,20 +1883,24 @@ form {
     outline: none !important;
   }
 }
+
 .btn-primary {
   background: $brand-primary;
   color: $brand-white;
   border: 2px solid $brand-primary;
+
   &:hover,
   &:focus,
   &:active {
     background: lighten($brand-primary, 5%) !important;
     border-color: lighten($brand-primary, 5%) !important;
   }
+
   &.btn-outline {
     background: transparent;
     color: $brand-primary;
     border: 2px solid $brand-primary;
+
     &:hover,
     &:focus,
     &:active {
@@ -1683,20 +1909,24 @@ form {
     }
   }
 }
+
 .btn-success {
   background: $brand-success;
   color: $brand-white;
   border: 2px solid $brand-success;
+
   &:hover,
   &:focus,
   &:active {
     background: darken($brand-success, 5%) !important;
     border-color: darken($brand-success, 5%) !important;
   }
+
   &.btn-outline {
     background: transparent;
     color: $brand-success;
     border: 2px solid $brand-success;
+
     &:hover,
     &:focus,
     &:active {
@@ -1705,20 +1935,24 @@ form {
     }
   }
 }
+
 .btn-info {
   background: $brand-info;
   color: $brand-white;
   border: 2px solid $brand-info;
+
   &:hover,
   &:focus,
   &:active {
     background: darken($brand-info, 5%) !important;
     border-color: darken($brand-info, 5%) !important;
   }
+
   &.btn-outline {
     background: transparent;
     color: $brand-info;
     border: 2px solid $brand-info;
+
     &:hover,
     &:focus,
     &:active {
@@ -1727,20 +1961,24 @@ form {
     }
   }
 }
+
 .btn-warning {
   background: $brand-warning;
   color: $brand-white;
   border: 2px solid $brand-warning;
+
   &:hover,
   &:focus,
   &:active {
     background: darken($brand-warning, 5%) !important;
     border-color: darken($brand-warning, 5%) !important;
   }
+
   &.btn-outline {
     background: transparent;
     color: $brand-warning;
     border: 2px solid $brand-warning;
+
     &:hover,
     &:focus,
     &:active {
@@ -1749,20 +1987,24 @@ form {
     }
   }
 }
+
 .btn-danger {
   background: $brand-danger;
   color: $brand-white;
   border: 2px solid $brand-danger;
+
   &:hover,
   &:focus,
   &:active {
     background: darken($brand-danger, 5%) !important;
     border-color: darken($brand-danger, 5%) !important;
   }
+
   &.btn-outline {
     background: transparent;
     color: $brand-danger;
     border: 2px solid $brand-danger;
+
     &:hover,
     &:focus,
     &:active {
@@ -1777,6 +2019,7 @@ form {
   border: 2px solid lighten($brand-black, 50%);
   font-size: 16px;
   @include transition(0.3s);
+
   &:hover,
   &:focus,
   &:active {
@@ -1787,6 +2030,7 @@ form {
 .btn.with-arrow {
   position: relative;
   @include transition(0.3s);
+
   i {
     visibility: hidden;
     opacity: 0;
@@ -1796,8 +2040,10 @@ form {
     margin-top: -8px;
     @include transition(0.2s);
   }
+
   &:hover {
     padding-right: 50px;
+
     i {
       color: $brand-white;
       right: 18px;
@@ -1806,6 +2052,7 @@ form {
     }
   }
 }
+
 // Form Input Field
 .form-control {
   box-shadow: none;
@@ -1814,6 +2061,7 @@ form {
   height: 54px;
   font-size: 18px;
   font-weight: 300;
+
   &:active,
   &:focus {
     outline: none;
@@ -1825,6 +2073,7 @@ form {
 .row-pb-md {
   padding-bottom: 4em !important;
 }
+
 .row-pb-sm {
   padding-bottom: 2em !important;
 }
