@@ -394,7 +394,7 @@ figure {
 }
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid #f14e95;
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   width: 100%;
@@ -406,6 +406,10 @@ figure {
 #fh5co-event .event-wrap {
     margin-bottom: 10px;
   }
+}
+#fh5co-counter .event-wrap.wife,
+#fh5co-event .event-wrap.wife {
+  border: 2px solid #11cef7;
 }
 #fh5co-counter .event-wrap h3,
 #fh5co-event .event-wrap h3 {
@@ -523,14 +527,14 @@ figure {
   background-repeat: no-repeat;
   position: relative;
   color: #fff;
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   line-height: 50px;
   font-size: 1.4em;
   text-align: center;
   position: absolute;
   top: 16px;
-  left: 50%;
+  left: calc(50% - 20px);
   margin-left: -80px;
   background-color: #999999;
   z-index: 100;
@@ -538,9 +542,14 @@ figure {
 }
 @media screen and (max-width: 480px) {
   .timeline > li > .timeline-badge {
-    width: 60px;
-    height: 60px;
-    margin-left: -20px !important;
+    width: 70px;
+    height: 70px;
+    margin-left: -25px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .timeline > li > .timeline-badge.marriage {
+    background-position-y: -30px !important;
   }
 }
 .timeline > li.timeline-inverted > .timeline-panel {
@@ -1056,13 +1065,13 @@ form label {
 .couple-half .bride {
   float: left;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
 }
 .couple-half .groom img,
 .couple-half .bride img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
 }
 @media screen and (max-width: 480px) {
