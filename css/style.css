@@ -93,7 +93,7 @@ figure {
   margin: 0;
   padding: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 32px 0;
   z-index: 1001;
 }
 @media screen and (max-width: 768px) {
@@ -107,6 +107,11 @@ figure {
   padding: 0;
   line-height: 40px;
   font-family: "Sacramento", Arial, serif;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-nav #fh5co-logo {
+    font-size: 32px;
+  }
 }
 .fh5co-nav a {
   padding: 5px 10px;
@@ -460,7 +465,7 @@ figure {
   position: absolute;
   content: " ";
   width: 1px;
-  background-color: #d4d4d4;
+  background-color: #ffffff;
   left: 50%;
   margin-left: 0px;
 }
@@ -482,10 +487,12 @@ figure {
 }
 .timeline > li > .timeline-panel {
   width: 40%;
+  min-height: 370px;
   float: left;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #ffffff;
   padding: 30px;
   position: relative;
+  background-color: #ffffff;
   border-radius: 4px;
 }
 .timeline > li > .timeline-panel:before {
@@ -542,9 +549,16 @@ figure {
 }
 @media screen and (max-width: 480px) {
   .timeline > li > .timeline-badge {
-    width: 70px;
-    height: 70px;
+    width: 70px !important;
+    height: 70px !important;
     margin-left: -25px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .timeline > li > .timeline-badge {
+    width: 160px;
+    height: 160px;
+    left: 50%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -982,6 +996,10 @@ form label {
   text-transform: uppercase;
   font-size: 12px;
   /* words */
+}
+
+#fh5co-couple-story {
+  background-color: #e7cbcb;
 }
 
 #fh5co-testimonial,
