@@ -702,8 +702,8 @@
 							<h2>Hello!</h2>
 							<p class="p-welcome">Xin chào mọi người!
 								<br />
-								Chúng tôi, <span style="color: #f14e95; font-size: 20px;">Quốc Huy</span> và <span
-									style="color: #f14e95; font-size: 20px;">Minh Ngọc</span> , xin gửi lời chào
+								Chúng tôi, <span class="span-welcome">Quốc Huy</span> và <span class="span-welcome">Minh
+									Ngọc</span> , xin gửi lời chào
 								thân ái và chân thành
 								đến quý vị và
 								các
@@ -799,6 +799,8 @@
 
 		.img-welcome {
 			width: 500px;
+			border: 1px solid;
+			box-shadow: 5px 5px #F14E95;
 		}
 
 		.modal-content {
@@ -817,8 +819,13 @@
 			margin: auto;
 			padding: 20px;
 			border: 1px solid #888;
-			width: 80%;
+			width: 50%;
 			color: #F14E95;
+		}
+
+		.span-welcome {
+			color: #f14e95 !important;
+			font-size: 20px;
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -828,6 +835,10 @@
 		}
 
 		@media screen and (max-width: 768px) {
+			.modal-welcome-content {
+				width: 80%;
+			}
+
 			.text-welcome {
 				margin-bottom: 0;
 			}
@@ -837,7 +848,11 @@
 			}
 
 			.p-welcome {
-				font-size: 16px !important;
+				font-size: 14px !important;
+			}
+
+			.span-welcome {
+				font-size: 16px;
 			}
 		}
 
